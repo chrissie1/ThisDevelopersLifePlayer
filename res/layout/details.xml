@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:orientation="vertical"
+              android:layout_height="fill_parent"
+              android:id="@+id/detailsView"
+              android:padding="5dp">
+    <LinearLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+        <ImageView  android:id="@+id/detailimg"
+                    android:scaleType="centerCrop"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"/>
+        <LinearLayout android:layout_width="fill_parent"
+                  android:id="@+id/linearLayout2"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:layout_marginLeft="5dp">
+            <TextView android:id="@+id/detailscurrentPodCast"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                      android:layout_width="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceMedium"
+                      android:text="@string/NoFileSelected"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/white"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceSmall"
+                      android:id="@+id/detailsPubDate"
+                      android:text="pubdate"
+                      android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:id="@+id/detailsDescription"
+              android:text="Description"
+              android:layout_marginBottom="10dp"/>
+    <Button android:id="@+id/viewInBrowserButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ViewInBrowser"
+            android:enabled="true"/>
+    <include layout="@layout/player"/>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_marginBottom="10dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@+id/detailsDeleteDownloadButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@string/DeleteDownload"
+                android:enabled="false"/>
+        <Button android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight=".5"
+                android:id="@+id/detailsDownloadButton"
+                android:text="@string/DownloadPodCast"
+                android:enabled="false"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="be.baes.thisDevelopersLifePlayer"
+          android:versionCode="1"
+          android:versionName="1.0.0">
+    <uses-sdk android:minSdkVersion="8"/>>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:icon="@drawable/tdl_logo1" android:label="@string/app_name">
+        <activity android:name="be.baes.thisDevelopersLifePlayer.ThisDeveloperLifeActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="android.app.default_searchable"
+                       android:value=".SearchTitlesActivity" />
+        </activity>
+        <activity android:name="be.baes.thisDevelopersLifePlayer.SettingsActivity"/>
+        <activity android:name="be.baes.thisDevelopersLifePlayer.DetailsActivity"/>
+        <activity android:name=".SearchTitlesActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/search"/>
+        </activity>
+    </application>
+</manifest>
